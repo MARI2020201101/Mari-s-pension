@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.maripen.reserv.mapper.ReservMapper">
+    <resultMap id="reservResultMap" type="com.maripen.reserv.entity.Reserv">
+        <id property="reservId" column="RESERV_ID" />
+        <result property="name" column="NAME"/>
+        <result property="startDate" column="START_DATE"/>
+        <result property="stayDate" column="STAY_DATE"/>
+        <result property="reservState" column="RESERV_STATE"/>
+        <result property="adultCount" column="ADULT_COUNT"/>
+        <result property="childCount" column="CHILD_COUNT"/>
+        <result property="babyCount" column="BABY_COUNT"/>
+        <result property="reservDate" column="RESERV_DATE"/>
+        <result property="roomId" column="ROOM_ID"/>
+        <result property="roomPrice" column="ROOM_PRICE"/>
+        <result property="ExtraPrice" column="EXTRA_PRICE"/>
+        <result property="TotalPrice" column="TOTAL_PRICE"/>
+        <result property="tel" column="TEL"/>
+        <result property="payment" column="PAYMENT"/>
+        <result property="peakUp" column="PEAKUP"/>
+        <result property="arrTime" column="ARR_TIME"/>
+        <result property="departure" column="DEPARTURE"/>
+        <result property="transport" column="TRANSPORT"/>
+        <result property="request" column="REQUEST"/>
+
+    </resultMap>
+    <select id="selectAll" resultMap="reservResultMap">
+        SELECT * FROM TBL_RESERV
+    </select>
+
+</mapper>
